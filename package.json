@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrajs/collections": "^0.3.4",
-    "astro": "^5.1.0"
+    "astro": "^5.1.0",
+    "dotenv": "^16.4.7"
   }
 }
