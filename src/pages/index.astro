@@ -1,11 +1,37 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { getCollection } from '../utils/db';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const collection = await getCollection('recipes'); // Replace with your collection name
+let recipes: { id: string; title: string }[] = [];
+
+// Function to handle search
+const searchRecipes = async (event: Event) => {
+    event.preventDefault();
+    const target = event.target as HTMLFormElement;
+    const searchTerm = (target.elements.namedItem('search') as HTMLInputElement).value;
+    recipes = await collection.find({ title: { $regex: searchTerm, $options: 'i' } });
+};
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html>
+  <body>
+    <div class="card">
+      <h1>Search for Christmas Cookie Recipes</h1>
+      <form onSubmit={searchRecipes}>
+        <input type="text" name="search" placeholder="Enter recipe name..." required />
+        <button type="submit">Search</button>
+      </form>
+      <div>
+        {recipes.length > 0 ? (
+          <ul>
+            {recipes.map(recipe => (
+              <li>{recipe.title}</li> // Display recipe titles
+            ))}
+          </ul>
+        ) : (
+          <p>No recipes found.</p>
+        )}
+      </div>
+    </div>
+  </body>
+</html>

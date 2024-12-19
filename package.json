@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrajs/collections": "^0.3.4",
     "astro": "^5.1.0"
   }
 }
