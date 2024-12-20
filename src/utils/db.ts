@@ -1,5 +1,5 @@
-import { DataAPIClient, Db, type VectorizeDoc, } from "@datastax/astra-db-ts"
-import dotenv from 'dotenv';
+import { DataAPIClient, Db, type VectorizeDoc } from "@datastax/astra-db-ts";
+import dotenv from "dotenv";
 dotenv.config();
 
 /**
@@ -17,7 +17,7 @@ export function connectToDatabase(): Db {
 
   if (!token || !endpoint) {
     throw new Error(
-      "Environment variables ASTRA_DB_API_ENDPOINT and ASTRA_DB_APPLICATION_TOKEN must be defined.",
+      "Environment variables ASTRA_DB_API_ENDPOINT and ASTRA_DB_APPLICATION_TOKEN must be defined."
     );
   }
 
@@ -25,7 +25,7 @@ export function connectToDatabase(): Db {
   const client = new DataAPIClient(token);
 
   // Get the database specified by your endpoint.
-  const database = client.db(endpoint, {keyspace: "default_keyspace"});
+  const database = client.db(endpoint, { keyspace: "christmas_cookies" });
 
   console.log(`Connected to database ${database.id}`);
 
@@ -37,7 +37,7 @@ export const getRecipes = async (): Promise<Recipe[]> => {
   const recipes = db.collection<Recipe>("recipes");
 
   try {
-    const allRecipes = recipes.find({})
+    const allRecipes = recipes.find({});
     return await allRecipes.toArray();
   } catch (error) {
     console.error("Error getting recipes: ", error);
@@ -47,5 +47,7 @@ export const getRecipes = async (): Promise<Recipe[]> => {
 
 export interface Recipe extends VectorizeDoc {
   _id: string;
-  Title: string;
+  description: string;
+  ingredients: string[];
+  instructions: string[];
 }

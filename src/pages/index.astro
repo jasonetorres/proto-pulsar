@@ -1,6 +1,7 @@
 ---
 import {getRecipes} from '../utils/db';
 import type {Recipe} from '../utils/db';
+import Layout from '../layouts/Layout.astro';
 
 const recipes: Recipe[] = await getRecipes();
 
@@ -13,10 +14,9 @@ const recipes: Recipe[] = await getRecipes();
 // };
 ---
 
-<html>
-  <body>
-    <div class="card">
-      <h1>Search for Christmas Cookie Recipes</h1>
+<Layout>
+  <div class="card">
+    <h1>Search for Christmas Cookie Recipes</h1>
       <!-- <form onsubmit={searchRecipes}>
         <input type="text" name="search" placeholder="Enter recipe name..." required />
         <button type="submit">Search</button>
@@ -25,7 +25,21 @@ const recipes: Recipe[] = await getRecipes();
         {recipes.length > 0 ? (
           <ul>
             {recipes.map(recipe => (
-              <li>{recipe.Title}</li> // Display recipe titles
+              <>
+                <li>{recipe.description}</li>
+                <p>Ingredients:</p>
+                <ul class="list-disc">
+                  {recipe.ingredients.map(ingredient => (
+                    <li>{ingredient}</li>
+                  ))}
+                </ul>
+                <p>Directions:</p>
+                <ul class="list-decimal">
+                  {recipe.instructions.map(step => (
+                    <li>{step}</li>
+                  ))}
+                </ul>
+              </>
             ))}
           </ul>
         ) : (
@@ -33,5 +47,10 @@ const recipes: Recipe[] = await getRecipes();
         )}
       </div>
     </div>
-  </body>
-</html>
+</Layout>
+
+<style>
+  ul {
+    @apply ml-8;
+  }
+</style>
