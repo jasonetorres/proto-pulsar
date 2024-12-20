@@ -1,31 +1,39 @@
 ---
-import { getCollection } from '../utils/db';
+// import { getCollection } from '../utils/db-old';
+import { connect } from 'http2';
+import {getRecipes} from '../utils/db';
+// import { connectToDatabase } from '../utils/db';
+// connectToDatabase();
+interface Recipe {
+  _id: string;
+  Title: string;
+}[]
 
-const collection = await getCollection('recipes'); // Replace with your collection name
-let recipes: { id: string; title: string }[] = [];
+const recipes = await getRecipes();
+
 
 // Function to handle search
-const searchRecipes = async (event: Event) => {
-    event.preventDefault();
-    const target = event.target as HTMLFormElement;
-    const searchTerm = (target.elements.namedItem('search') as HTMLInputElement).value;
-    recipes = await collection.find({ title: { $regex: searchTerm, $options: 'i' } });
-};
+// const searchRecipes = async (event: Event) => {
+//     event.preventDefault();
+//     const target = event.target as HTMLFormElement;
+//     const searchTerm = (target.elements.namedItem('search') as HTMLInputElement).value;
+//     recipes = await collection.find({ title: { $regex: searchTerm, $options: 'i' } });
+// };
 ---
 
 <html>
   <body>
     <div class="card">
       <h1>Search for Christmas Cookie Recipes</h1>
-      <form onSubmit={searchRecipes}>
+      <!-- <form onsubmit={searchRecipes}>
         <input type="text" name="search" placeholder="Enter recipe name..." required />
         <button type="submit">Search</button>
-      </form>
+      </form> -->
       <div>
         {recipes.length > 0 ? (
           <ul>
             {recipes.map(recipe => (
-              <li>{recipe.title}</li> // Display recipe titles
+              <li>{recipe.Title}</li> // Display recipe titles
             ))}
           </ul>
         ) : (

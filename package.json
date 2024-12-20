@@ -9,8 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrajs/collections": "^0.3.4",
+    "@datastax/astra-db-ts": "^1.5.0",
     "astro": "^5.1.0",
     "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2"
   }
 }
