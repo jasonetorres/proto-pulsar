@@ -2,7 +2,6 @@ import { DataAPIClient, Db, type VectorizeDoc, } from "@datastax/astra-db-ts"
 import dotenv from 'dotenv';
 dotenv.config();
 
-
 /**
  * Connects to a DataStax Astra database.
  * This function retrieves the database endpoint and application token from the
@@ -35,7 +34,7 @@ export function connectToDatabase(): Db {
 
 export const getRecipes = async () => {
   const db = connectToDatabase();
-  const recipes = db.collection("recipes");
+  const recipes = db.collection<Recipe>("recipes");
 
   try {
     const allRecipes = recipes.find({})
@@ -46,22 +45,7 @@ export const getRecipes = async () => {
   }
 };
 
-// You can define interfaces that describe the shape of your data.
-// The VectorizeDoc interface adds a $vectorize key.
-export interface Book extends VectorizeDoc {
-  title: string;
-  author: string;
-  numberOfPages: number;
-  rating: number;
-  publicationYear: number;
-  summary: string;
-  genres: string[];
-  metadata: {
-    ISBN: string;
-    language: string;
-    edition: string;
-  };
-  isCheckedOut: boolean;
-  borrower: string | null;
-  dueDate: string | null;
+export interface Recipe extends VectorizeDoc {
+  _id: string;
+  Title: string;
 }

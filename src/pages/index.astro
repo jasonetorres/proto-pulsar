@@ -1,16 +1,8 @@
 ---
-// import { getCollection } from '../utils/db-old';
-import { connect } from 'http2';
 import {getRecipes} from '../utils/db';
-// import { connectToDatabase } from '../utils/db';
-// connectToDatabase();
-interface Recipe {
-  _id: string;
-  Title: string;
-}[]
+import type {Recipe} from '../utils/db';
 
-const recipes = await getRecipes();
-
+const recipes: Recipe[] = await getRecipes();
 
 // Function to handle search
 // const searchRecipes = async (event: Event) => {
