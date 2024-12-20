@@ -32,7 +32,7 @@ export function connectToDatabase(): Db {
   return database;
 }
 
-export const getRecipes = async () => {
+export const getRecipes = async (): Promise<Recipe[]> => {
   const db = connectToDatabase();
   const recipes = db.collection<Recipe>("recipes");
 
