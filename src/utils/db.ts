@@ -32,18 +32,23 @@ export function connectToDatabase(): Db {
   return database;
 }
 
-export const getRecipes = async (): Promise<Recipe[]> => {
+export async function getRecipes(query?: any): Promise<Recipe[]> {
   const db = connectToDatabase();
   const recipes = db.collection<Recipe>("recipes");
 
   try {
-    const allRecipes = recipes.find({});
-    return await allRecipes.toArray();
+    if (query) {
+      console.log("Searching with query:", JSON.stringify(query, null, 2));
+      const results = await recipes.find(query).toArray();
+      console.log("Found results:", results.length);
+      return results;
+    }
+    return await recipes.find({}).toArray();
   } catch (error) {
     console.error("Error getting recipes: ", error);
     return [];
   }
-};
+}
 
 export interface Recipe extends VectorizeDoc {
   _id: string;

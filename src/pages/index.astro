@@ -3,27 +3,37 @@ import {getRecipes} from '../utils/db';
 import Layout from '../layouts/Layout.astro';
 import RecipeCard from '../components/RecipeCard.astro';
 import type {Recipe} from '../utils/db';
+import Searchbar from '../components/Searchbar.astro';
+let recipes: Recipe[] = await getRecipes();
 
-const recipes: Recipe[] = await getRecipes();
+export const searchRecipes = async (event: Event) => {
+  event.preventDefault();
+  const form = event.target as HTMLFormElement;
+  const searchTerm = (form.elements.namedItem('search') as HTMLInputElement).value;
+  console.log(searchTerm);
+  if (searchTerm.trim()) {
+    recipes = await getRecipes({
+      $or: [
+        { title: { $regex: searchTerm, $options: 'i' }},
+        { description: { $regex: searchTerm, $options: 'i' }}
+      ]
+    });
+  } else {
+    recipes = await getRecipes();
+  }
+};
 
-// Function to handle search
-// const searchRecipes = async (event: Event) => {
-//     event.preventDefault();
-//     const target = event.target as HTMLFormElement;
-//     const searchTerm = (target.elements.namedItem('search') as HTMLInputElement).value;
-//     recipes = await collection.find({ title: { $regex: searchTerm, $options: 'i' } });
-// };
 ---
 
 <Layout>
   <div class="card">
-    <h1 class="pb-12 text-center">Christmas Cookie Recipes</h1>
-      <!-- <form onsubmit={searchRecipes}>
-        <input type="text" name="search" placeholder="Enter recipe name..." required />
-        <button type="submit">Search</button>
-      </form> -->
+    <header>
+      <h1 class="pb-12 text-center">Christmas Cookie Recipes</h1>
+      <Searchbar onsubmit={searchRecipes} />
+    </header>
+
       {recipes.length > 0 ? (
-        <div class="space-y-8">
+        <div class="space-y-8" data-recipes-container>
           {recipes.map(recipe => (
             <RecipeCard
               cookTime={recipe.cookTime}
