@@ -1,7 +1,8 @@
 ---
 import {getRecipes} from '../utils/db';
-import type {Recipe} from '../utils/db';
 import Layout from '../layouts/Layout.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import type {Recipe} from '../utils/db';
 
 const recipes: Recipe[] = await getRecipes();
 
@@ -16,36 +17,29 @@ const recipes: Recipe[] = await getRecipes();
 
 <Layout>
   <div class="card">
-    <h1 class="pb-12">Search for Christmas Cookie Recipes</h1>
+    <h1 class="pb-12 text-center">Christmas Cookie Recipes</h1>
       <!-- <form onsubmit={searchRecipes}>
         <input type="text" name="search" placeholder="Enter recipe name..." required />
         <button type="submit">Search</button>
       </form> -->
-      <div class="space-y-[1em]">
-        {recipes.length > 0 ? (
-          <>
-            {recipes.map(recipe => (
-              <>
-                <h2>{recipe.description}</h2>
-                <p class="font-bold">Ingredients:</p>
-                <ul class="list-disc">
-                  {recipe.ingredients.map(ingredient => (
-                    <li>{ingredient}</li>
-                  ))}
-                </ul>
-                <p font-bold>Directions:</p>
-                <ul class="list-decimal">
-                  {recipe.instructions.map(step => (
-                    <li>{step}</li>
-                  ))}
-                </ul>
-              </>
-            ))}
-          </>
-        ) : (
-          <p>No recipes found.</p>
-        )}
-      </div>
+      {recipes.length > 0 ? (
+        <div class="space-y-8">
+          {recipes.map(recipe => (
+            <RecipeCard
+              cookTime={recipe.cookTime}
+              description={recipe.description}
+              difficulty={recipe.difficulty}
+              ingredients={recipe.ingredients}
+              instructions={recipe.instructions}
+              prepTime={recipe.prepTime}
+              title={recipe.title}
+              totalTime={recipe.totalTime}
+            />
+          ))}
+        </div>
+      ) : (
+        <p>No recipes found.</p>
+      )}
     </div>
 </Layout>
 

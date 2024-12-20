@@ -17,7 +17,7 @@ export function connectToDatabase(): Db {
 
   if (!token || !endpoint) {
     throw new Error(
-      "Environment variables ASTRA_DB_API_ENDPOINT and ASTRA_DB_APPLICATION_TOKEN must be defined."
+      "Environment variables ASTRA_DB_API_ENDPOINT and ASTRA_DB_APPLICATION_TOKEN must be defined.",
     );
   }
 
@@ -47,7 +47,12 @@ export const getRecipes = async (): Promise<Recipe[]> => {
 
 export interface Recipe extends VectorizeDoc {
   _id: string;
+  title: string;
   description: string;
   ingredients: string[];
   instructions: string[];
+  prepTime: string;
+  cookTime: string;
+  totalTime: string;
+  difficulty: string;
 }

@@ -1,0 +1,65 @@
+---
+const { cookTime, description, difficulty, ingredients, instructions, prepTime,title, totalTime } = Astro.props;
+---
+
+<div class="container mx-auto p-6 bg-card border-2 border-border rounded-lg space-y-[1em] ">
+  <h2>{title || 'Recipe Title'}</h2>
+  <p>{description || 'Recipe description'}</p>
+  <div class="space-y-0 w-fit border-2 border-primary rounded-md border-dashed mx-auto px-4">
+    <div class="flex gap-4 justify-center py-4 text-center">
+
+      <div>
+        <p class="text-sm font-bold">Total Time</p>
+        <p class="text-sm">{totalTime || 'Total Time not found'}</p>
+      </div>
+
+      <div>
+        <p class="text-sm font-bold">Difficulty</p>
+        <p class="text-sm">{difficulty || 'Difficulty not found'}</p>
+      </div>
+    </div>
+  </div>
+  <p class="font-bold text-lg">Ingredients:</p>
+  <ul class="list-disc">
+    {!ingredients || ingredients.length === 0 ? (
+      <li>Ingredients not found</li>
+    ) : (
+      ingredients.map((ingredient: string) => (
+        <li>{ingredient}</li>
+      ))
+    )}
+  </ul>
+  <p class="font-bold text-lg">Instructions:</p>
+  <ol class="list-decimal">
+    {!instructions || instructions.length === 0 ? (
+      <li>Instructions not found</li>
+    ) : (
+      instructions.map((instruction: string) => (
+        <li>{instruction}</li>
+      ))
+    )}
+  </ol>
+
+  <div class="flex gap-4 justify-center py-4 text-center">
+    <div>
+      <p class="text-sm font-bold">Prep Time</p>
+      <p class="text-sm">{prepTime || 'Prep Time not found'}</p>
+    </div>
+
+    <div>
+      <p class="text-sm font-bold">Cook Time</p>
+      <p class="text-sm">{cookTime || 'Cook Time not found'}</p>
+    </div>
+
+    <div>
+      <p class="text-sm font-bold">Total Time</p>
+      <p class="text-sm">{totalTime || 'Total Time not found'}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  ul, ol {
+    margin-left: 2rem;
+  }
+</style>
