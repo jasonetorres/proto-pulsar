@@ -1,4 +1,7 @@
-# Recipe Search Application
+
+![dscookie](https://github.com/user-attachments/assets/8106aaff-989f-42a9-9572-a279dc2970f6)
+
+# Datastax Christmas Cookie Recipe Finder
 
 ## Overview
 
