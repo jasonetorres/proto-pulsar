@@ -3,9 +3,9 @@
 const { onsubmit } = Astro.props;
 
 ---
-<div class="flex items-center justify-center">
+<div class="flex items-center justify-center my-8">
   <div class="bg-card shadow-lg rounded-lg p-8 w-full max-w-md">
-    <form class="mb-1 flex gap-2" onsubmit={onsubmit} data-search-form>
+    <form class="flex gap-2" onsubmit={onsubmit} data-search-form>
       <input 
         type="text"
         name="search"
