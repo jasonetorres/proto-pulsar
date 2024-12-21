@@ -30,77 +30,14 @@ const { onsubmit } = Astro.props;
     console.log('🔎 Client: Searching for:', searchTerm);
     
     try {
-      const url = `/api/search?q=${encodeURIComponent(searchTerm)}`;
+      const url = new URL('/api/search', window.location.origin);
+      url.searchParams.set('q', searchTerm);
       console.log('🌐 Client: Fetching:', url);
       
       const response = await fetch(url);
       const recipes = await response.json();
       
       console.log('✅ Client: Received', recipes.length, 'recipes');
-      
-      // TODO: Fix code below so the searched recipes are displayed properly.
-      const recipesContainer = document.querySelector('[data-recipes-container]');
-      if (recipesContainer || recipes == searchTerm) {
-        const recipeHTML = recipes.map((recipe) => `
-          <div class="container mx-auto p-6 bg-card border-2 border-border rounded-lg space-y-[1em]">
-            <h2>${recipe.title || 'Recipe Title'}</h2>
-            <p>${recipe.description || 'Recipe description'}</p>
-            <div class="space-y-0 w-fit border-2 border-primary rounded-md border-dashed mx-auto px-4">
-                <div class="flex gap-4 justify-center py-4 text-center">
-
-                <div>
-                    <p class="text-sm font-bold">Total Time</p>
-                    <p class="text-sm">${recipe.totalTime || 'Total Time not found'}</p>
-                </div>
-
-                <div>
-                    <p class="text-sm font-bold">Difficulty</p>
-                    <p class="text-sm">${recipe.difficulty || 'Difficulty not found'}</p>
-                </div>
-                </div>
-            </div>
-            <p class="font-bold text-lg">Ingredients:</p>
-            <ul class="list-disc">
-                {!${recipe.ingredients} || ${recipe.ingredients}.length === 0 ? (
-                <li>Ingredients not found</li>
-                ) : (
-                ${recipe.ingredients}.map((ingredient: string) => (
-                    <li>${ingredient}</li>
-                ))
-                )}
-            </ul>
-            <p class="font-bold text-lg">Instructions:</p>
-            <ol class="list-decimal">
-                {!${recipe.instructions} || ${recipe.instructions}.length === 0 ? (
-                <li>Instructions not found</li>
-                ) : (
-                ${recipe.instructions}.map((instruction: string) => (
-                    <li>${recipe.instructions}</li>
-                ))
-                )}
-            </ol>
-
-            <div class="flex gap-4 justify-center py-4 text-center">
-                <div>
-                <p class="text-sm font-bold">Prep Time</p>
-                <p class="text-sm">${recipe.prepTime || 'Prep Time not found'}</p>
-                </div>
-
-                <div>
-                <p class="text-sm font-bold">Cook Time</p>
-                <p class="text-sm">${recipe.cookTime || 'Cook Time not found'}</p>
-                </div>
-
-                <div>
-                <p class="text-sm font-bold">Total Time</p>
-                <p class="text-sm">${recipe.totalTime || 'Total Time not found'}</p>
-                </div>
-            </div>
-            </div>
-        `).join('');
-        
-        recipesContainer.innerHTML = recipes.length ? recipeHTML : '<p>No recipes found.</p>';
-      }
     } catch (error) {
       console.error('❌ Search failed:', error);
     }
