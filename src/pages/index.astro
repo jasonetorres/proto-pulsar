@@ -1,4 +1,5 @@
 ---
+export const prerender = false;
 import {getRecipes} from '../utils/db';
 import Layout from '../layouts/Layout.astro';
 import RecipeCard from '../components/RecipeCard.astro';
@@ -18,10 +19,13 @@ export const searchRecipes = async (event: Event) => {
         { description: { $regex: searchTerm, $options: 'i' }}
       ]
     });
+    console.log(recipes);
   } else {
     recipes = await getRecipes();
   }
 };
+
+
 
 ---
 

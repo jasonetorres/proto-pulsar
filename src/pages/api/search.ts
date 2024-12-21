@@ -1,11 +1,11 @@
 import type { APIRoute } from "astro";
 import { getRecipes } from "../../utils/db";
 
-export const GET: APIRoute = async ({ url }) => {
-  const searchTerm = url.searchParams.get("q") || "";
-
-  console.log("Search term:", searchTerm);
-
+export const GET: APIRoute = async ({ request }) => {
+ const url = new URL(request.url);
+ const searchTerm = url.searchParams.get("q") || "";;
+ 
+ console.log("Search term:", searchTerm);
   let recipes;
   if (searchTerm.trim()) {
     const query = {
@@ -14,7 +14,7 @@ export const GET: APIRoute = async ({ url }) => {
         { description: { $regex: `.*${searchTerm}.*`, $options: "i" } },
       ],
     };
-    console.log("Database query:", JSON.stringify(query, null, 2));
+    // console.log("Database query:", JSON.stringify(query, null, 2));
     recipes = await getRecipes(query);
   } else {
     recipes = await getRecipes();
