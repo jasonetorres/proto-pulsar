@@ -3,21 +3,24 @@
 const { onsubmit } = Astro.props;
 
 ---
-
-<form class="mb-8 flex gap-2" onsubmit={onsubmit} data-search-form>
-  <input 
-    type="text"
-    name="search"
-    placeholder="Search recipes..."
-    class="w-full rounded border border-input bg-card px-4 py-2 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-  />
-  <button 
-    type="submit"
-    class="rounded bg-primary px-4 py-2 text-primary-foreground hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring"
-  >
-    Search
-  </button>
-</form>
+<div class="flex items-center justify-center min-h-screen">
+  <div class="bg-card shadow-lg rounded-lg p-8 w-full max-w-md">
+    <form class="mb-1 flex gap-2" onsubmit={onsubmit} data-search-form>
+      <input 
+        type="text"
+        name="search"
+        placeholder="Search recipes..."
+        class="w-full rounded border border-input bg-card px-4 py-2 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+      />
+      <button 
+        type="submit"
+        class="rounded bg-primary px-4 py-2 text-primary-foreground hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+</div>
 
 <script>
   const form = document.querySelector('[data-search-form]');
