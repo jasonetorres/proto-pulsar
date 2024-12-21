@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { getRecipes } from "../../utils/db";
 
-export const GET: APIRoute = async ({ request, params }) => {
+export const GET: APIRoute = async ({ request }) => {
  const url = new URL(request.url);
  const searchTerm = url.searchParams.get("q") || "";;
  
