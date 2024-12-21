@@ -1,6 +1,8 @@
 ---
 import Footer from '../components/Footer.astro';
 import '../styles/globals.css';
+import backgroundImage from '../assets/background.svg';
+import { Image } from 'astro:assets';
 ---
 
 <!doctype html>
@@ -12,10 +14,15 @@ import '../styles/globals.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>Christ Cookie Recipe Finder</title>
 	</head>
-	<body class="bg-background text-foreground">
-		<div class="container mx-auto px-4 pt-8 lg:px-0 max-w-screen-sm">
+	<body class=" text-foreground">
+		<Image 
+			src={backgroundImage} 
+			alt="Background" 
+			class="fixed inset-0 w-full h-full object-cover -z-10" 
+		/>
+		<div class="container mx-auto px-4 pt-8 lg:px-0 max-w-screen-sm min-h-screen place-content-center">
 			<slot />
+			<Footer />
 		</div>
-		<Footer />
 	</body>
 </html>
