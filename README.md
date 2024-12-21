@@ -1,48 +1,88 @@
-# Astro Starter Kit: Basics
+# Recipe Search Application
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Overview
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+The Recipe Search Application is a web application developed for the **DataStax Christmas Giveaway**. This project showcases the capabilities of the **DataStax Astra** database, allowing users to search for recipes by title. Built with **Astro**, this application demonstrates how to create a modern web experience while leveraging the power of a cloud-based database.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **Search Functionality**: Users can search for recipes by entering keywords in the title.
+- **Dynamic Results**: The application retrieves and displays matching recipes in real-time.
+- **DataStax Astra Integration**: Utilizes the DataStax Astra database to store and query recipe data.
 
-## 🚀 Project Structure
+## Technologies Used
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Frontend**: Astro
+- **Database**: DataStax Astra (Apache Cassandra)
+- **JavaScript/TypeScript**: For client-side and server-side logic
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Getting Started
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Follow these steps to set up and run the Recipe Search Application locally:
 
-## 🧞 Commands
+### Prerequisites
 
-All commands are run from the root of the project, from a terminal:
+- **Node.js** (version 14 or higher)
+- **npm** (Node Package Manager)
+- A **DataStax Astra** account with a database set up
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Installation
 
-## 👀 Want to learn more?
+1. **Clone the Repository**
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+   ```bash
+   git clone https://github.com/yourusername/recipe-search-app.git
+   cd recipe-search-app
+   ```
+
+2. **Install Dependencies**
+
+   Run the following command to install the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. **Set Up Environment Variables**
+
+   Create a `.env` file in the root of the project and add your DataStax Astra connection details:
+
+   ```plaintext
+   ASTRA_DB_API_ENDPOINT=https://<your-database-endpoint>
+   ASTRA_DB_APPLICATION_TOKEN=<your-application-token>
+   ```
+
+   Replace `<your-database-endpoint>` and `<your-application-token>` with your actual DataStax Astra credentials.
+
+### Running the Application
+
+1. **Start the Development Server**
+
+   Run the following command to start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+2. **Access the Application**
+
+   Open your web browser and navigate to `http://localhost:4321` to access the Recipe Search Application.
+
+### Usage
+
+- Enter a recipe title in the search bar and click the "Search" button.
+- The application will query the DataStax Astra database for matching recipes and display the results dynamically.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- **DataStax Astra**: Thank you for providing a powerful cloud-based database solution that makes it easy to manage and query data.
+- **Astro**: A special thanks to the Astro framework for enabling the creation of fast and modern web applications.
+- **DataStax Christmas Giveaway**: This project was developed as part of the DataStax Christmas Giveaway, showcasing the integration of Astra with modern web technologies.
