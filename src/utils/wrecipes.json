@@ -1,0 +1,489 @@
+[
+  {
+    "title": "Classic Sugar Cookies",
+    "description": "Traditional holiday sugar cookies perfect for decorating with royal icing and sprinkles",
+    "ingredients": [
+      "3 cups all-purpose flour",
+      "1 teaspoon baking powder",
+      "1/2 teaspoon salt",
+      "1 cup unsalted butter, softened",
+      "1 1/2 cups granulated sugar",
+      "2 large eggs",
+      "2 teaspoons vanilla extract"
+    ],
+    "instructions": [
+      "In a medium bowl, whisk together flour, baking powder, and salt",
+      "In a large bowl, cream butter and sugar until light and fluffy",
+      "Beat in eggs one at a time, then stir in vanilla",
+      "Gradually blend in dry ingredients",
+      "Cover dough and chill for at least 1 hour",
+      "Preheat oven to 350°F (175°C)",
+      "Roll out dough on floured surface to 1/4 inch thickness",
+      "Cut into shapes with cookie cutters",
+      "Place cookies 1 inch apart on ungreased cookie sheets",
+      "Bake for 8-10 minutes until edges are lightly browned",
+      "Cool on wire racks"
+    ],
+    "prepTime": "30 minutes",
+    "cookTime": "10 minutes",
+    "totalTime": "1 hour 40 minutes",
+    "difficulty": "Medium"
+  },
+  {
+    "title": "Chocolate Crinkle Cookies",
+    "description": "Rich, fudgy chocolate cookies rolled in powdered sugar that create a beautiful crackled appearance when baked",
+    "ingredients": [
+      "1 cup unsweetened cocoa powder",
+      "2 cups white sugar",
+      "1/2 cup vegetable oil",
+      "4 eggs",
+      "2 teaspoons vanilla extract",
+      "2 cups all-purpose flour",
+      "2 teaspoons baking powder",
+      "1/2 teaspoon salt",
+      "1/2 cup powdered sugar (for rolling)"
+    ],
+    "instructions": [
+      "Mix cocoa powder, white sugar, and oil in a bowl",
+      "Beat in eggs one at a time, then stir in vanilla",
+      "Combine flour, baking powder, and salt in separate bowl",
+      "Stir dry ingredients into wet mixture",
+      "Cover dough and refrigerate for at least 4 hours",
+      "Preheat oven to 350°F (175°C)",
+      "Roll dough into 1-inch balls",
+      "Coat each ball in powdered sugar",
+      "Place on lined baking sheets",
+      "Bake for 10-12 minutes"
+    ],
+    "prepTime": "20 minutes",
+    "cookTime": "12 minutes",
+    "totalTime": "4 hours 32 minutes",
+    "difficulty": "Easy"
+  },
+  {
+    "title": "Gingerbread Men",
+    "description": "Spicy, sweet gingerbread cookies perfect for decorating and gifting",
+    "ingredients": [
+      "3 cups all-purpose flour",
+      "1 1/2 teaspoons baking powder",
+      "3/4 teaspoon baking soda",
+      "1/4 teaspoon salt",
+      "1 tablespoon ground ginger",
+      "1 3/4 teaspoons ground cinnamon",
+      "1/4 teaspoon ground cloves",
+      "6 tablespoons unsalted butter",
+      "3/4 cup dark brown sugar",
+      "1 large egg",
+      "1/2 cup molasses",
+      "2 teaspoons vanilla extract"
+    ],
+    "instructions": [
+      "Whisk together flour, baking powder, baking soda, salt, ginger, cinnamon, and cloves",
+      "Beat butter, brown sugar, and egg in large bowl",
+      "Add molasses and vanilla extract",
+      "Gradually stir in dry ingredients",
+      "Wrap dough and chill for at least 4 hours",
+      "Preheat oven to 350°F (175°C)",
+      "Roll dough 1/4 inch thick",
+      "Cut with gingerbread cookie cutter",
+      "Place on lined baking sheets",
+      "Bake for 8-10 minutes"
+    ],
+    "prepTime": "25 minutes",
+    "cookTime": "10 minutes",
+    "totalTime": "4 hours 35 minutes",
+    "difficulty": "Medium"
+  },
+  {
+    "title": "Snickerdoodles",
+    "description": "Soft and chewy cinnamon-sugar cookies with a characteristic crackled surface",
+    "ingredients": [
+      "2 3/4 cups all-purpose flour",
+      "2 teaspoons cream of tartar",
+      "1 teaspoon baking soda",
+      "1/4 teaspoon salt",
+      "1 cup butter, softened",
+      "1 1/2 cups granulated sugar",
+      "2 large eggs",
+      "2 teaspoons vanilla extract",
+      "1/4 cup sugar mixed with 2 teaspoons cinnamon for rolling"
+    ],
+    "instructions": [
+      "Whisk together flour, cream of tartar, baking soda, and salt",
+      "Cream butter and sugar until light and fluffy",
+      "Beat in eggs and vanilla",
+      "Gradually mix in dry ingredients",
+      "Chill dough for 30 minutes",
+      "Preheat oven to 375°F (190°C)",
+      "Roll dough into 1-inch balls",
+      "Roll balls in cinnamon-sugar mixture",
+      "Place on ungreased baking sheets",
+      "Bake for 10-12 minutes"
+    ],
+    "prepTime": "20 minutes",
+    "cookTime": "12 minutes",
+    "totalTime": "1 hour",
+    "difficulty": "Easy"
+  },
+  {
+    "title": "Peanut Butter Blossoms",
+    "description": "Classic peanut butter cookies topped with chocolate kisses",
+    "ingredients": [
+      "1 3/4 cups all-purpose flour",
+      "1 teaspoon baking soda",
+      "1/2 teaspoon salt",
+      "1/2 cup butter, softened",
+      "1/2 cup peanut butter",
+      "1/2 cup white sugar",
+      "1/2 cup packed brown sugar",
+      "1 egg",
+      "1 teaspoon vanilla extract",
+      "48 chocolate kisses"
+    ],
+    "instructions": [
+      "Sift together flour, baking soda, and salt",
+      "Cream butter, peanut butter, and sugars",
+      "Beat in egg and vanilla",
+      "Gradually blend in dry ingredients",
+      "Shape dough into 1-inch balls",
+      "Roll in additional sugar",
+      "Place on ungreased cookie sheets",
+      "Bake at 375°F for 10 minutes",
+      "Press a chocolate kiss into each cookie",
+      "Cool completely"
+    ],
+    "prepTime": "20 minutes",
+    "cookTime": "10 minutes",
+    "totalTime": "45 minutes",
+    "difficulty": "Easy"
+  },
+  {
+    "title": "Shortbread Cookies",
+    "description": "Buttery, crisp Scottish-style shortbread cookies",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "1/2 teaspoon salt",
+      "1 cup unsalted butter, softened",
+      "1/2 cup powdered sugar",
+      "1 teaspoon vanilla extract"
+    ],
+    "instructions": [
+      "Whisk together flour and salt",
+      "Cream butter until smooth",
+      "Gradually mix in powdered sugar and vanilla",
+      "Slowly blend in flour mixture",
+      "Chill dough for 1 hour",
+      "Preheat oven to 350°F (175°C)",
+      "Roll out dough 1/4 inch thick",
+      "Cut into desired shapes",
+      "Place on parchment-lined baking sheets",
+      "Bake for 12-15 minutes until edges are lightly golden"
+    ],
+    "prepTime": "15 minutes",
+    "cookTime": "15 minutes",
+    "totalTime": "1 hour 30 minutes",
+    "difficulty": "Easy"
+  },
+  {
+    "title": "Thumbprint Cookies",
+    "description": "Buttery cookies filled with your favorite jam",
+    "ingredients": [
+      "2 1/4 cups all-purpose flour",
+      "1/2 teaspoon salt",
+      "1 cup unsalted butter, softened",
+      "2/3 cup sugar",
+      "2 large egg yolks",
+      "1 teaspoon vanilla extract",
+      "1/2 cup your favorite jam"
+    ],
+    "instructions": [
+      "Whisk together flour and salt",
+      "Cream butter and sugar until light",
+      "Beat in egg yolks and vanilla",
+      "Gradually add flour mixture",
+      "Chill dough for 30 minutes",
+      "Preheat oven to 350°F (175°C)",
+      "Roll dough into 1-inch balls",
+      "Make indentation in center of each cookie",
+      "Fill with jam",
+      "Bake for 12-15 minutes"
+    ],
+    "prepTime": "25 minutes",
+    "cookTime": "15 minutes",
+    "totalTime": "1 hour 10 minutes",
+    "difficulty": "Medium"
+  },
+  {
+    "title": "Spritz Cookies",
+    "description": "Classic pressed butter cookies in festive shapes",
+    "ingredients": [
+      "3 1/2 cups all-purpose flour",
+      "1 teaspoon baking powder",
+      "1 1/2 cups butter, softened",
+      "1 cup sugar",
+      "1 egg",
+      "2 tablespoons milk",
+      "1 teaspoon vanilla extract",
+      "1/2 teaspoon almond extract"
+    ],
+    "instructions": [
+      "Combine flour and baking powder",
+      "Cream butter and sugar until light",
+      "Beat in egg, milk, and extracts",
+      "Gradually blend in flour mixture",
+      "Preheat oven to 375°F (190°C)",
+      "Fill cookie press with dough",
+      "Press cookies onto ungreased baking sheets",
+      "Decorate with sprinkles if desired",
+      "Bake for 8-10 minutes",
+      "Cool on wire racks"
+    ],
+    "prepTime": "30 minutes",
+    "cookTime": "10 minutes",
+    "totalTime": "1 hour",
+    "difficulty": "Medium"
+  },
+  {
+    "title": "Mexican Wedding Cookies",
+    "description": "Tender, nutty cookies rolled in powdered sugar",
+    "ingredients": [
+      "1 cup unsalted butter, softened",
+      "1/2 cup powdered sugar",
+      "1 teaspoon vanilla extract",
+      "2 1/4 cups all-purpose flour",
+      "1/4 teaspoon salt",
+      "3/4 cup finely chopped pecans",
+      "Extra powdered sugar for rolling"
+    ],
+    "instructions": [
+      "Cream butter and powdered sugar",
+      "Beat in vanilla extract",
+      "Mix in flour and salt",
+      "Stir in chopped pecans",
+      "Chill dough for 30 minutes",
+      "Preheat oven to 350°F (175°C)",
+      "Shape into 1-inch balls",
+      "Place on ungreased baking sheets",
+      "Bake for 15 minutes",
+      "Roll warm cookies in powdered sugar"
+    ],
+    "prepTime": "20 minutes",
+    "cookTime": "15 minutes",
+    "totalTime": "1 hour 5 minutes",
+    "difficulty": "Easy"
+  },
+  {
+    "title": "Candy Cane Cookies",
+    "description": "Festive peppermint-flavored cookies twisted into candy cane shapes",
+    "ingredients": [
+      "1 cup butter, softened",
+      "1 cup powdered sugar",
+      "1 egg",
+      "1 teaspoon vanilla extract",
+      "1 teaspoon peppermint extract",
+      "2 1/2 cups all-purpose flour",
+      "1/2 teaspoon salt",
+      "Red food coloring"
+    ],
+    "instructions": [
+      "Cream butter and sugar until light",
+      "Beat in egg and extracts",
+      "Gradually add flour and salt",
+      "Divide dough in half",
+      "Color one half with red food coloring",
+      "Chill both doughs for 4 hours",
+      "Shape into ropes and twist together",
+      "Form into candy cane shapes",
+      "Bake at 375°F for 9-10 minutes",
+      "Cool completely"
+    ],
+    "prepTime": "45 minutes",
+    "cookTime": "10 minutes",
+    "totalTime": "5 hours",
+    "difficulty": "Medium"
+  },
+  {
+    "title": "Linzer Cookies",
+    "description": "Sandwich cookies with jam filling and powdered sugar topping",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "1/2 cup ground almonds",
+      "1/2 teaspoon cinnamon",
+      "1/2 teaspoon salt",
+      "1 cup butter, softened",
+      "2/3 cup sugar",
+      "1 egg",
+      "1 teaspoon vanilla extract",
+      "Raspberry jam for filling",
+      "Powdered sugar for dusting"
+    ],
+    "instructions": [
+      "Mix flour, almonds, cinnamon, and salt",
+      "Cream butter and sugar",
+      "Beat in egg and vanilla",
+      "Gradually add dry ingredients",
+      "Chill dough for 2 hours",
+      "Roll out and cut with Linzer cutters",
+      "Cut centers from half the cookies",
+      "Bake at 350°F for 10-12 minutes",
+      "Spread solid cookies with jam",
+      "Dust cut-out cookies with sugar and sandwich together"
+    ],
+    "prepTime": "40 minutes",
+    "cookTime": "12 minutes",
+    "totalTime": "3 hours",
+    "difficulty": "Advanced"
+  },
+  {
+    "title": "Eggnog Cookies",
+    "description": "Soft cookies flavored with eggnog and nutmeg",
+    "ingredients": [
+      "2 1/4 cups all-purpose flour",
+      "1 teaspoon baking powder",
+      "1/2 teaspoon ground nutmeg",
+      "1/2 teaspoon ground cinnamon",
+      "1 1/4 cups sugar",
+      "3/4 cup butter, softened",
+      "1/2 cup eggnog",
+      "1 teaspoon vanilla extract",
+      "2 large egg yolks"
+    ],
+    "instructions": [
+      "Whisk dry ingredients together",
+      "Cream butter and sugar",
+      "Beat in eggnog, vanilla, and egg yolks",
+      "Gradually mix in dry ingredients",
+      "Chill dough for 1 hour",
+      "Preheat oven to 350°F",
+      "Drop rounded tablespoons onto baking sheets",
+      "Bake for 10-12 minutes",
+      "Cool on wire racks",
+      "Dust with nutmeg if desired"
+    ],
+    "prepTime": "20 minutes",
+    "cookTime": "12 minutes",
+    "totalTime": "1 hour 32 minutes",
+    "difficulty": "Easy"
+  },
+  {
+    "title": "Peppermint Meringues",
+    "description": "Light and airy peppermint-flavored meringue cookies",
+    "ingredients": [
+      "4 large egg whites",
+      "1/4 teaspoon cream of tartar",
+      "1 cup sugar",
+      "1/2 teaspoon peppermint extract",
+      "Red food coloring",
+      "Crushed candy canes for decoration"
+    ],
+    "instructions": [
+      "Beat egg whites until foamy",
+      "Add cream of tartar",
+      "Gradually add sugar while beating",
+      "Beat until stiff peaks form",
+      "Fold in peppermint extract",
+      "Paint stripes of food coloring inside piping bag",
+      "Pipe meringues onto lined baking sheets",
+      "Sprinkle with crushed candy canes",
+      "Bake at 225°F for 90 minutes",
+      "Let cool in oven"
+    ],
+    "prepTime": "30 minutes",
+    "cookTime": "90 minutes",
+    "totalTime": "2 hours",
+    "difficulty": "Medium"
+  },
+  {
+    "title": "Cranberry White Chocolate Cookies",
+    "description": "Chewy cookies studded with dried cranberries and white chocolate chips",
+    "ingredients": [
+      "2 1/4 cups all-purpose flour",
+      "1 teaspoon baking soda",
+      "1/2 teaspoon salt",
+      "1 cup butter, softened",
+      "3/4 cup sugar",
+      "3/4 cup brown sugar",
+      "2 large eggs",
+      "1 teaspoon vanilla extract",
+      "1 cup dried cranberries",
+      "1 cup white chocolate chips"
+    ],
+    "instructions": [
+      "Combine flour, baking soda, and salt",
+      "Cream butter and sugars",
+      "Beat in eggs and vanilla",
+      "Gradually add flour mixture",
+      "Stir in cranberries and white chocolate",
+      "Drop by rounded tablespoons",
+      "Bake at 375°F for 10-12 minutes",
+      "Cool on baking sheets for 5 minutes",
+      "Transfer to wire racks",
+      "Cool completely"
+    ],
+    "prepTime": "15 minutes",
+    "cookTime": "12 minutes",
+    "totalTime": "45 minutes",
+    "difficulty": "Easy"
+  },
+  {
+    "title": "Almond Snowballs",
+    "description": "Tender almond-flavored cookies coated in powdered sugar",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "1 cup ground almonds",
+      "1/2 teaspoon salt",
+      "1 cup butter, softened",
+      "1/2 cup powdered sugar",
+      "1 teaspoon almond extract",
+      "1 teaspoon vanilla extract",
+      "Additional powdered sugar for coating"
+    ],
+    "instructions": [
+      "Mix flour, almonds, and salt",
+      "Cream butter and sugar",
+      "Beat in extracts",
+      "Gradually add flour mixture",
+      "Chill dough for 30 minutes",
+      "Shape into 1-inch balls",
+      "Place on ungreased baking sheets",
+      "Bake at 350°F for 15 minutes",
+      "Cool slightly",
+      "Roll in powdered sugar while still warm"
+    ],
+    "prepTime": "25 minutes",
+    "cookTime": "15 minutes",
+    "totalTime": "1 hour 10 minutes",
+    "difficulty": "Easy"
+  },
+  {
+    "title": "Chocolate Mint Cookies",
+    "description": "Rich chocolate cookies with a cool mint flavor",
+    "ingredients": [
+      "1 3/4 cups all-purpose flour",
+      "2 teaspoons baking soda",
+      "1/2 cup cocoa powder",
+      "1 cup butter, softened",
+      "1 cup sugar",
+      "1 egg",
+      "1 teaspoon peppermint extract",
+      "1 cup chocolate chips",
+      "Andes mints for topping"
+    ],
+    "instructions": [
+      "Combine flour, baking soda, and cocoa",
+      "Cream butter and sugar",
+      "Beat in egg and peppermint extract",
+      "Gradually add dry ingredients",
+      "Stir in chocolate chips",
+      "Drop by rounded tablespoons",
+      "Bake at 350°F for 10-12 minutes",
+      "Place Andes mint on each hot cookie",
+      "Spread melted mint with knife",
+      "Cool completely"
+    ],
+    "prepTime": "20 minutes",
+    "cookTime": "12 minutes",
+    "totalTime": "45 minutes",
+    "difficulty": "Medium"
+  }
+]
