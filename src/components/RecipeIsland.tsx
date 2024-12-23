@@ -55,7 +55,7 @@ export default function RecipeIsland({ recipes }: { recipes: Recipe[] }) {
       ) : (
         <div>
           <p>No recipes found.</p>
-          <button onClick={handleReset} className="mt-5 mb-5 p-2 text-white rounded" style={{ backgroundColor: '#E11D48' }} >
+          <button onClick={handleReset} className="mt-5 mb-5 p-3 text-white text-center rounded" style={{ backgroundColor: '#E11D48' }} >
             Back to Search
           </button>
         </div>
