@@ -10,9 +10,9 @@ export default function Searchbar({
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <div className="my-8 w-full flex-col">
-      <div className="w-full max-w-md rounded-lg bg-card p-8 shadow-lg">
-        <form className="flex gap-2" onSubmit={onSubmit}>
+    <div className="my-10 w-full flex-col">
+      <div className="w-full max-w rounded-lg bg-card p-6 shadow-lg">
+        <form className="flex gap-3" onSubmit={onSubmit}>
           <input
             type="text"
             name="search"
@@ -29,7 +29,7 @@ export default function Searchbar({
           </button>
         </form>
       </div>
-      <div className="mt-4 w-full max-w-md">
+      <div className="mt-4 w-full max-w">
         <button
           onClick={() => {
             setSearchTerm("");
