@@ -14,6 +14,7 @@
     "@datastax/astra-db-ts": "^1.5.0",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "@vercel/speed-insights": "^1.1.0",
     "astro": "^5.1.0",
     "dotenv": "^16.4.7",
     "react": "^19.0.0",
