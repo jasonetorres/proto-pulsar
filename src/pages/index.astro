@@ -1,60 +1,18 @@
 ---
-export const prerender = false;
 import {getRecipes} from '../utils/db';
 import Layout from '../layouts/Layout.astro';
-import RecipeCard from '../components/RecipeCard.astro';
 import type {Recipe} from '../utils/db';
-import Searchbar from '../components/Searchbar.astro';
+import RecipeIsland from '../components/RecipeIsland';
 let recipes: Recipe[] = await getRecipes();
-
-export const searchRecipes = async (event: Event) => {
-  event.preventDefault();
-  const form = event.target as HTMLFormElement;
-  const searchTerm = (form.elements.namedItem('search') as HTMLInputElement).value;
-  console.log(searchTerm);
-  if (searchTerm.trim()) {
-    recipes = await getRecipes({
-      $or: [
-        { title: { $regex: searchTerm, $options: 'i' }},
-        { description: { $regex: searchTerm, $options: 'i' }}
-      ]
-    });
-    console.log(recipes);
-  } else {
-    recipes = await getRecipes();
-  }
-};
-
-
-
 ---
 
 <Layout>
   <div class="place-content-center">
     <header>
       <h1 class="text-center">Christmas Cookie Recipes</h1>
-      <Searchbar onsubmit={searchRecipes} />
     </header>
     
-
- {recipes.length > 0 ? (
-        <div class="space-y-8" data-recipes-container>
-          {recipes.map(recipe => (
-            <RecipeCard
-              cookTime={recipe.cookTime}
-              description={recipe.description}
-              difficulty={recipe.difficulty}
-              ingredients={recipe.ingredients}
-              instructions={recipe.instructions}
-              prepTime={recipe.prepTime}
-              title={recipe.title}
-              totalTime={recipe.totalTime}
-            />
-          ))}
-        </div>
-      ) : (
-        <p>No recipes found.</p>
-      )} 
+    <RecipeIsland recipes={recipes} client:load/>
     </div>
 </Layout>
 
