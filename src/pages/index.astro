@@ -3,6 +3,7 @@ import {getRecipes} from '../utils/db';
 import Layout from '../layouts/Layout.astro';
 import type {Recipe} from '../utils/db';
 import RecipeIsland from '../components/RecipeIsland';
+import Searchbar from '../components/SearchBar';
 let recipes: Recipe[] = await getRecipes();
 ---
 
@@ -11,7 +12,6 @@ let recipes: Recipe[] = await getRecipes();
     <header>
       <h1 class="text-center">Christmas Cookie Recipes</h1>
     </header>
-    
     <RecipeIsland recipes={recipes} client:load/>
     </div>
 </Layout>

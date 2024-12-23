@@ -35,10 +35,9 @@ export default function RecipeIsland({ recipes }: { recipes: Recipe[] }) {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <Searchbar onSubmit={handleSubmit} handleReset={handleReset} />
-
       {filteredRecipes.length > 0 ? (
         <div className="space-y-8" data-recipes-container>
+          <Searchbar onSubmit={handleSubmit} handleReset={handleReset} />
           {filteredRecipes.map((recipe, index) => (
             <RecipeCard
               key={`recipe-${index}-${recipe.title.toLocaleLowerCase()}`}
@@ -54,7 +53,12 @@ export default function RecipeIsland({ recipes }: { recipes: Recipe[] }) {
           ))}
         </div>
       ) : (
-        <p>No recipes found.</p>
+        <div>
+          <p>No recipes found.</p>
+          <button onClick={handleReset} className="mt-5 mb-5 p-2 text-white rounded" style={{ backgroundColor: '#E11D48' }} >
+            Back to Search
+          </button>
+        </div>
       )}
     </div>
   );

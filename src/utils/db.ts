@@ -63,6 +63,7 @@ export async function getRecipes(searchTerm?: string): Promise<Recipe[]> {
 }
 
 export interface Recipe extends VectorizeDoc {
+  id: React.Key | null | undefined;
   _id: string;
   title: string;
   description: string;
