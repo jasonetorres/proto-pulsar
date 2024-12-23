@@ -31,7 +31,7 @@ export default function RecipeIsland({ recipes }: { recipes: Recipe[] }) {
 
   const handleReset = () => {
     setFilteredRecipes(recipes);
-  }
+  };
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -41,7 +41,7 @@ export default function RecipeIsland({ recipes }: { recipes: Recipe[] }) {
         <div className="space-y-8" data-recipes-container>
           {filteredRecipes.map((recipe, index) => (
             <RecipeCard
-              key={recipe._id + index}
+              key={`recipe-${index}-${recipe.title.toLocaleLowerCase()}`}
               cookTime={recipe.cookTime}
               description={recipe.description}
               difficulty={recipe.difficulty}
